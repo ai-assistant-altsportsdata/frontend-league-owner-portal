@@ -6,7 +6,8 @@ const __dirname = dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  // Enable standalone for Google Cloud Run, disable for Vercel
+  ...(process.env.VERCEL ? {} : { output: 'standalone' }),
   outputFileTracingRoot: __dirname,
   experimental: {
     // App directory is now stable in Next.js 15
