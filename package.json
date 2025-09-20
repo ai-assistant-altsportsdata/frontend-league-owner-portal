@@ -1,0 +1,39 @@
+{
+  "name": "frontend-210-league-dropbox-onboarding",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3210",
+    "build": "next build",
+    "start": "next start -p 3210",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^15.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-switch": "^1.0.3",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "lucide-react": "^0.344.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.2.0",
+    "zustand": "^4.4.7",
+    "framer-motion": "^10.16.16",
+    "react-dropzone": "^14.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^15.0.0",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  }
+}
