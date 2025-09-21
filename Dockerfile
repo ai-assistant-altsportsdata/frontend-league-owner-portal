@@ -1,4 +1,4 @@
-# Simple Next.js deployment for Google Cloud Run
+# Simple Next.js Dockerfile based on working deployment
 FROM node:18-alpine
 
 WORKDIR /app
@@ -7,16 +7,17 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production && npm cache clean --force
+RUN npm install
 
 # Copy application source
 COPY . .
 
-# Build the application
+# Set environment variables
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=8080
 
+# Build the application
 RUN npm run build
 
 # Create non-root user
